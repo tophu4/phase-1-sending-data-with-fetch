@@ -23,7 +23,16 @@ function submitData(name, email) { // 2 string args
         document.querySelector("body").innerHTML += htmlStr;
     })
     .catch(error => {
-        alert("error - submitData()")
-        console.log("error - submitData()")
+        const errorObj = {
+            message: "error submitting data with submitData()"
+        }
+
+        const htmlError = `
+            <div>
+                <p>${errorObj.message}</p>
+            </div>
+        `;
+
+        document.querySelector("body").innerHTML += htmlError;
     })
 }
