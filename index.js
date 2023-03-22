@@ -1,7 +1,7 @@
 // Add your code here
-function submitData(username, email) { // 2 string args
+function submitData(name, email) { // 2 string args
     const inputData = {
-        username: `${username}`,
+        name: `${name}`,
         email: `${email}`
     }
 
@@ -17,8 +17,7 @@ function submitData(username, email) { // 2 string args
     .then(json => {
         const htmlStr = `
             <div>
-                <p>Username: ${json.username}</p>
-                <p>Email: ${json.email}</p>
+                <p>${json.id}</p>
             </div>
             `;
         document.querySelector("body").innerHTML += htmlStr;
